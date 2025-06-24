@@ -48,3 +48,20 @@ function mostrarDescripcion(id) {
 function cerrarModal() {
   modal.style.display = 'none';
 }
+
+function elegirCantidad(id) {
+  productoSeleccionado = productos.find(p => p.id === id);
+  cantidadInput.value = 1;
+  cantidadModal.style.display = 'flex';
+}
+confirmarCantidad.onclick = () => {
+  const cantidad = parseInt(cantidadInput.value);
+  if (cantidad > 0) {
+    agregarAlCarrito(productoSeleccionado, cantidad);
+    cantidadModal.style.display = 'none';
+    alert('¡Producto añadido correctamente al carrito!');
+  }
+};
+cancelarCantidad.onclick = () => {
+  cantidadModal.style.display = 'none';
+};
