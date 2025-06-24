@@ -75,3 +75,20 @@ function agregarAlCarrito(producto, cantidad) {
   }
   actualizarCarrito();
 }
+
+function actualizarCarrito() {
+  carritoItems.innerHTML = '';
+  let total = 0;
+  carrito.forEach(p => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      ${p.title} x${p.cantidad} - $${p.price * p.cantidad}
+      <button onclick="eliminarDelCarrito(${p.id})">🗑️</button>
+    `;
+    carritoItems.appendChild(div);
+    total += p.price * p.cantidad;
+  });
+  totalSpan.textContent = `$${total.toFixed(2)}`;
+  contador.textContent = carrito.reduce((acc, p) => acc + p.cantidad, 0);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
