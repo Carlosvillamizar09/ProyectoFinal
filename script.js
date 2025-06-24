@@ -133,3 +133,20 @@ function mostrarCyberDays(productos) {
     gallery.appendChild(img);
   });
 }
+
+fetch('https://fakestoreapi.com/products')
+  .then(res => res.json())
+  .then(data => {
+    productos = data;
+    renderizarProductos(productos);
+    actualizarCarrito();
+    mostrarCyberDays(productos);
+
+    const categorias = [...new Set(productos.map(p => p.category))];
+    categorias.forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat;
+      opt.textContent = cat;
+      filtroCategoria.appendChild(opt);
+    });
+  });
