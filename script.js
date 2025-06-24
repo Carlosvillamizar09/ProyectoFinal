@@ -120,3 +120,16 @@ function aplicarFiltros() {
   );
   renderizarProductos(filtrados);
 }
+
+function mostrarCyberDays(productos) {
+  const gallery = document.getElementById('cyber-gallery');
+  const seleccionados = productos.sort(() => 0.5 - Math.random()).slice(0, 3);
+  gallery.innerHTML = '';
+  seleccionados.forEach(p => {
+    const img = document.createElement('img');
+    img.src = p.image;
+    img.alt = p.title;
+    img.title = p.title;
+    gallery.appendChild(img);
+  });
+}
