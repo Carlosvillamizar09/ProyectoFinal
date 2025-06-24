@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: #ff4c4c;
+  background: #001989;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@ header {
 }
 
 #cyberdays {
-  background: linear-gradient(90deg, #ff6a00, #ff007a);
+  background: linear-gradient(90deg, #74c7ff, #043aba);
   padding: 20px;
   color: white;
   text-align: center;
@@ -91,13 +91,13 @@ header {
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
-  background: #ff4c4c;
+  background: #0088ff;
   color: white;
   cursor: pointer;
 }
 
 .producto button:hover {
-  background: #e03d3d;
+  background: #1900ff;
 }
 
 #carrito-container {
