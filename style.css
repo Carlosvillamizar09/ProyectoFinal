@@ -58,3 +58,44 @@ header {
   font-size: 1em;
   min-width: 200px;
 }
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 8px #ddd;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.producto button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4c4c;
+  color: white;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background: #e03d3d;
+}
