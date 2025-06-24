@@ -18,3 +18,27 @@ header {
 .logo {
   font-weight: bold;
 }
+
+#cyberdays {
+  background: linear-gradient(90deg, #ff6a00, #ff007a);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.cyber-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.cyber-gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+}
