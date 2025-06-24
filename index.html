@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,6 +26,31 @@
     </select>
   </section>
 
+  <main>
+    <section id="productos" class="productos-grid"></section>
+  </main>
+
+  <div id="carrito-container">
+    <h2>🛒 Tu Carrito</h2>
+    <div id="carrito-items"></div>
+    <p>Total: <span id="total">$0.00</span></p>
+    <button id="vaciar-carrito">Vaciar Carrito</button>
+  </div>
+
+  <div id="modal">
+    <div id="modal-content"></div>
+  </div>
+
+  <div id="cantidad-modal">
+    <div class="cantidad-content">
+      <p>¿Cuántas unidades deseas agregar?</p>
+      <input type="number" id="cantidad-input" min="1" value="1" />
+      <button id="confirmar-cantidad">Agregar</button>
+      <button id="cancelar-cantidad">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
