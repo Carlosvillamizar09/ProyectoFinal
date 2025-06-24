@@ -99,3 +99,22 @@ header {
 .producto button:hover {
   background: #e03d3d;
 }
+
+#carrito-container {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  background: #fff;
+  border-left: 2px solid #ccc;
+  width: 300px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 15px;
+  display: none;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+#carrito-btn {
+  cursor: pointer;
+}
