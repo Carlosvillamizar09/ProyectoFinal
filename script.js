@@ -106,3 +106,17 @@ vaciarBtn.onclick = () => {
 carritoBtn.onclick = () => {
   carritoContenedor.style.display = carritoContenedor.style.display === 'block' ? 'none' : 'block';
 };
+
+buscarInput.oninput = aplicarFiltros;
+filtroCategoria.onchange = aplicarFiltros;
+
+function aplicarFiltros() {
+  const texto = buscarInput.value.toLowerCase();
+  const cat = filtroCategoria.value;
+
+  const filtrados = productos.filter(p =>
+    (cat === 'todos' || p.category === cat) &&
+    (p.title.toLowerCase().includes(texto) || p.description.toLowerCase().includes(texto))
+  );
+  renderizarProductos(filtrados);
+}
