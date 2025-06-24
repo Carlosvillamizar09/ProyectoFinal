@@ -92,3 +92,17 @@ function actualizarCarrito() {
   contador.textContent = carrito.reduce((acc, p) => acc + p.cantidad, 0);
   localStorage.setItem('carrito', JSON.stringify(carrito));
 }
+
+function eliminarDelCarrito(id) {
+  carrito = carrito.filter(p => p.id !== id);
+  actualizarCarrito();
+}
+
+vaciarBtn.onclick = () => {
+  carrito = [];
+  actualizarCarrito();
+};
+
+carritoBtn.onclick = () => {
+  carritoContenedor.style.display = carritoContenedor.style.display === 'block' ? 'none' : 'block';
+};
