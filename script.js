@@ -65,3 +65,13 @@ confirmarCantidad.onclick = () => {
 cancelarCantidad.onclick = () => {
   cantidadModal.style.display = 'none';
 };
+
+function agregarAlCarrito(producto, cantidad) {
+  const existente = carrito.find(p => p.id === producto.id);
+  if (existente) {
+    existente.cantidad += cantidad;
+  } else {
+    carrito.push({ ...producto, cantidad });
+  }
+  actualizarCarrito();
+}
