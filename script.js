@@ -34,3 +34,17 @@ function renderizarProductos(lista) {
     contenedorProductos.appendChild(div);
   });
 }
+
+function mostrarDescripcion(id) {
+  const p = productos.find(p => p.id === id);
+  modalContent.innerHTML = `
+    <h3>${p.title}</h3>
+    <img src="${p.image}" alt="" />
+    <p>${p.description}</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  `;
+  modal.style.display = 'flex';
+}
+function cerrarModal() {
+  modal.style.display = 'none';
+}
