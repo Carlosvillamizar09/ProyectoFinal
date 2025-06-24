@@ -118,3 +118,44 @@ header {
 #carrito-btn {
   cursor: pointer;
 }
+
+#modal, #cantidad-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+}
+
+#modal-content img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.cantidad-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.cantidad-content input {
+  padding: 10px;
+  width: 60px;
+  margin: 10px 0;
+}
