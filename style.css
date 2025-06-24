@@ -35,8 +35,8 @@ header {
 }
 
 .cyber-gallery img {
-  width: 120px;
-  height: 120px;
+  width: 350px;
+  height: 350px;
   object-fit: contain;
   background: white;
   border-radius: 8px;
