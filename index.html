@@ -11,6 +11,7 @@
   <header>
     <div class="logo"><img src="logo.png" alt="logo" width="100px"></div>
     <div id="carrito-btn">🛒 <span id="carrito-contador">0</span></div>
+    <div id="favorito-btn">⭐ <span id="favorito-contador">0</span></div>
   </header>
 
   <section id="cyberdays">
@@ -36,16 +37,31 @@
     <button id="vaciar-carrito">Vaciar Carrito</button>
   </div>
 
+  <div id="favorito-container">
+    <h2>⭐ Tus Favoritos</h2>
+    <div id="favorito-items"></div>
+    <button id="vaciar-favorito">Vaciar Favoritos</button>
+  </div>
+
   <div id="modal">
     <div id="modal-content"></div>
   </div>
-
+ 
   <div id="cantidad-modal">
     <div class="cantidad-content">
       <p>¿Cuántas unidades deseas agregar?</p>
       <input type="number" id="cantidad-input" min="1" value="1" />
       <button id="confirmar-cantidad">Agregar</button>
       <button id="cancelar-cantidad">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="cantimom-modal">
+    <div class="cantimom-content">
+      <p>¿Deseas añadir este producto a favoritos?</p>
+      <input type="number" id="cantimom-input"/>
+      <button id="confirmar-cantimom">Agregar</button>
+      <button id="cancelar-cantimom">Cancelar</button>
     </div>
   </div>
 

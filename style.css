@@ -5,14 +5,19 @@ body {
   color: #222;
 }
 
+header img {
+  padding-right: 100px;
+}
+
+
 header {
   background: #001989;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: white;
   font-size: 1.2em;
+  justify-content: space-between
 }
 
 .logo {
@@ -116,11 +121,42 @@ header {
   z-index: 999;
 }
 
+#favorito-container {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  background: #fff;
+  border-left: 2px solid #ccc;
+  width: 300px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 15px;
+  display: none;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
 #carrito-btn {
   cursor: pointer;
 }
 
+#favorito-btn {
+  cursor: pointer;
+}
+
 #modal, #cantidad-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#modal, #cantimom-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -160,6 +196,21 @@ header {
   width: 60px;
   margin: 10px 0;
 }
+
+.cantimom-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.cantimom-content input {
+  padding: 10px;
+  width: 60px;
+  margin: 10px 0;
+}
+
 footer {
   position: fixed;
   bottom: 0;
